@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+        getunifihosts:
+                build: .
+                image: dlashua/getunifihosts
+                container_name: getunifihosts
+                restart: unless-stopped
+                user: 1000:1000
+                volumes:
+                        - ./unifi.hosts:/tmp/unifi.out
+                environment:
+                        UNIFI_BASEURL: YOUR UNIFI URL
+                        UNIFI_USERNAME: YOUR UNIFI USERNAME
+                        UNIFI_PASSWORD: YOUR UNIFI PASSWORD
+
