@@ -35,7 +35,7 @@ def get_active_clients(session):
     return r.json()['data']
 
 def prettify(name):
-    return re.sub(r'[^a-zA-Z0-9-]', "", name) + ".local"
+    return re.sub(r'[^a-zA-Z0-9-]', "", name)
     #if re.search('^[a-zA-Z0-9-]+$', c['name'])
 
 
